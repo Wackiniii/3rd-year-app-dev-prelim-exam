@@ -1,4 +1,3 @@
--- 1. CLIENT (7 Records)
 INSERT INTO client (id, first_name, last_name, email, contact_num, created_at) VALUES
 (1, 'Marcus', 'Vance', 'marcus.vance@example.com', '09171234501', CURRENT_TIMESTAMP),
 (2, 'Elena', 'Reyes', 'elena.reyes@example.com', '09171234502', CURRENT_TIMESTAMP),
@@ -13,7 +12,6 @@ INSERT INTO client (id, first_name, last_name, email, contact_num, created_at) V
 (11, 'Angela', 'Santos', 'angela.santos@example.com', '09171234511', CURRENT_TIMESTAMP),
 (12, 'Julian', 'Cruz', 'julian.cruz@example.com', '09171234512', CURRENT_TIMESTAMP);
 
--- 2. INSTRUMENT (7 Records)
 INSERT INTO instrument (id, client_id, type, brand_model, serial_number, created_at) VALUES
 (1, 1, 'Electric Guitar', 'Fender Player Stratocaster', 'MX21049281', CURRENT_TIMESTAMP),
 (2, 2, 'Acoustic Guitar', 'Taylor 214ce DLX', 'TY20220811', CURRENT_TIMESTAMP),
@@ -29,7 +27,6 @@ INSERT INTO instrument (id, client_id, type, brand_model, serial_number, created
 (12, 9, 'Saxophone', 'Yamaha YAS-62III Alto', 'YAS62-8821', CURRENT_TIMESTAMP),
 (13, 10, 'Acoustic Guitar', 'Martin D-28', 'MN20204122', CURRENT_TIMESTAMP);
 
--- 3. TECHNICIAN (7 Records)
 INSERT INTO technician (id, first_name, last_name, email, contact_num, specialty, created_at) VALUES
 (1, 'Arthur', 'Pendleton', 'arthur.p@shoprepairs.com', '09281112201', 'Luthier / Fretwork', CURRENT_TIMESTAMP),
 (2, 'Siddharth', 'Nair', 'sid.nair@shoprepairs.com', '09281112202', 'Audio Electronics', CURRENT_TIMESTAMP),
@@ -42,7 +39,6 @@ INSERT INTO technician (id, first_name, last_name, email, contact_num, specialty
 (9, 'Hannah', 'Abbott', 'hannah.a@shoprepairs.com', '09281112209', 'Audio Electronics', CURRENT_TIMESTAMP),
 (10, 'Marco', 'Reyes', 'marco.r@shoprepairs.com', '09281112210', 'General Setup & Maintenance', CURRENT_TIMESTAMP);
 
--- 4. SERVICE (7 Records)
 INSERT INTO service (id, service_type, instrument_type, estimated_hour, created_at) VALUES
 (1, 'Full Setup & Restring', 'Guitar / Bass', 1.50, CURRENT_TIMESTAMP),
 (2, 'Fret Level, Crown & Polish', 'Guitar / Bass', 3.00, CURRENT_TIMESTAMP),
@@ -55,7 +51,6 @@ INSERT INTO service (id, service_type, instrument_type, estimated_hour, created_
 (9, 'Complete Rewire & Shielding', 'Electric Guitar / Bass', 2.00, CURRENT_TIMESTAMP),
 (10, 'Saxophone Overhaul & Re-cork', 'Woodwinds', 4.00, CURRENT_TIMESTAMP);
 
--- 5. REPAIR (7 Records)
 INSERT INTO repair (id, instrument_id, technician_id, service_id, status, issue, cost, date_received, date_finished, created_at) VALUES
 (1, 1, 2, 3, 'completed', 'Heavy crackle from pickup selector switch and loose 1/4" output jack', 120.00, '2026-08-01', '2026-08-02', CURRENT_TIMESTAMP),
 (2, 2, 1, 1, 'completed', 'High action across upper frets and noticeable fret buzz at the 5th fret', 75.00, '2026-08-03', '2026-08-04', CURRENT_TIMESTAMP),
